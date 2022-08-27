@@ -13,9 +13,7 @@ public class Application {
         this.mainController = mainController;
     }
 
-
     public Result run(String[] args) {
-
         String command = args[0]; //encode
         String[] parameters = Arrays.copyOfRange(args, 1 ,args.length); //text.txt encoded.txt 45
         return mainController.execute(command,parameters);
