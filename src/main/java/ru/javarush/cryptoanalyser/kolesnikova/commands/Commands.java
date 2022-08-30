@@ -57,24 +57,7 @@ public class Commands {
     }
 
 
-    public static List<String> encodeText(int key, List<String> strings) {
-        checkingTheKey(key);
-        List<String> listResult = new ArrayList<>();
-        for (String s : strings
-        ) {
-//            char[] chars = new char[s.toCharArray().length];
-            char[] chars = s.toCharArray();
-            for (int j = 0; j < chars.length; j++) {
-                if (Strings.alphabetToList().contains(chars[j])) {
-                    int sourceIndex = Strings.alphabetToList().indexOf(chars[j]);
-                    int resultIndex = (sourceIndex + key) % Strings.alphabetToList().size();
-                    chars[j] = Strings.alphabetToList().get(resultIndex);
-                }
-//                listResult.add(String.valueOf(chars));
-            }
-            listResult.add(String.valueOf(chars));
-        }
-        return listResult;
-    }
+
+
 
 }
