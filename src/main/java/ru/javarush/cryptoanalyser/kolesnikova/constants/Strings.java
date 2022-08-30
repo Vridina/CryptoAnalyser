@@ -5,20 +5,15 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Strings {
-//    private static final List<Character> RU = Arrays.asList('א', 'ב', 'ג',
-//            'ד', 'ה', 'ו', 'ז', 'ח', 'ט', 'ך', 'כ', 'ל', 'ם', 'מ', 'ן', 'נ', 'ס', 'ע', 'ף',
-//            'פ', 'ץ', 'צ', 'ק', 'ר', 'ש', 'ת', 'û', 'ü', '‎', 'ÿ');
-//
-//        private static final String EN = "abcdefghijklmnopqrstuvwxyz";
-//    private static final List<Character> NUMBERS = Arrays.asList('1', '2', '3', '4', '5', '6', '7', '8', '9', '0');
-//    private static final String SYMBOLS = " .,«»\"'\\:!? +-=&@*()";
-//    public static final List<Character> ALPHABET =
+    private static final String RU = "אבגדהו¸זחטיךכלםמןנסעףפץצקרשתûü‎‏ÿ";
+    private static final String EN = "abcdefghijklmnopqrstuvwxyz";
+    private static final String NUMBERS = "1234567890";
+    private static final String SYMBOLS = " .,«»\"'\\:!? +-=&@*()%";
+    private static final String ALPHABET = RU + RU.toUpperCase() + EN + EN.toUpperCase() + NUMBERS + SYMBOLS;
 
-    public static final List<Character> ALPHABET = Arrays.asList('א', 'ב', 'ג',
-            'ד', 'ה', 'ו', 'ז', 'ח', 'ט', 'ך', 'כ', 'ל', 'ם', 'מ', 'ן', 'נ', 'ס', 'ע', 'ף',
-            'פ', 'ץ', 'צ', 'ק', 'ר', 'ש', 'ת', 'û', 'ü', '‎', 'ÿ', '.', ',', '«', '»',
-            ':', '!', '?', ' ');
-
-
-
+    public static List<Character> alphabetToList() {
+        List<Character> list = new ArrayList<>();
+        for (char c : ALPHABET.toCharArray()) list.add(c);
+        return list;
+    }
 }

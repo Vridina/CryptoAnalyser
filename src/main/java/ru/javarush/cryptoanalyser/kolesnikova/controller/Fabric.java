@@ -21,6 +21,12 @@ public enum Fabric {
         this.action = action;
     }
 
+    // Получается я беру в файнде Фабрик.ДЕКОДЕ.акшин, так как
+    //  так как Фабрик.ДЕКОДЕ - это this, а
+    //  в конструкторе фабрика переменна Aкшина участвует
+    //  и получается что я вызываю консруктор..? который создает
+    //  наследника соответсвующего.
+
     static Action find(String command) {
         return Fabric.valueOf(command.toUpperCase()).action;
     }
