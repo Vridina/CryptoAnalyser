@@ -17,7 +17,7 @@ public class Commands {
     public static List<String> readFile(Path sourcePath) {
 //        checkingTheFileType(sourcePath);
         List<String> sourceList = new ArrayList<>();
-        try (BufferedReader reader = Files.newBufferedReader(sourcePath, StandardCharsets.UTF_8)) {  // делаю вычитку из файла в буффер, указываю КОДИРОВКУ!
+        try (BufferedReader reader = Files.newBufferedReader(sourcePath, StandardCharsets.UTF_8)) {
             while (reader.ready()) {
                 sourceList.add(reader.readLine() + "\n");
             }
@@ -27,6 +27,19 @@ public class Commands {
         return sourceList;
     }
 
+
+    public static List<String> readFileDict(Path sourcePath) {
+//        checkingTheFileType(sourcePath);
+        List<String> sourceList = new ArrayList<>();
+        try (BufferedReader reader = Files.newBufferedReader(sourcePath, StandardCharsets.UTF_8)) {
+            while (reader.ready()) {
+                sourceList.add(reader.readLine());
+            }
+        } catch (Exception e) {
+            throw new ApplicationExceptions("Неизвестная ошибка чтения файла. Попробуйте еще раз.");
+        }
+        return sourceList;
+    }
 
     public static void writeFile(Path resultPath, List<String> resultString) {
 //        checkingTheFileType(resultPath);
