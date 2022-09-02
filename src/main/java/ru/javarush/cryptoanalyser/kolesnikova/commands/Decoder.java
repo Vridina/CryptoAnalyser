@@ -1,31 +1,21 @@
 package ru.javarush.cryptoanalyser.kolesnikova.commands;
 
-import ru.javarush.cryptoanalyser.kolesnikova.constants.Strings;
 import ru.javarush.cryptoanalyser.kolesnikova.entity.Result;
 import ru.javarush.cryptoanalyser.kolesnikova.entity.ResultCode;
-import ru.javarush.cryptoanalyser.kolesnikova.exceptions.ApplicationExceptions;
 import ru.javarush.cryptoanalyser.kolesnikova.util.PathFinder;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
+
 import java.nio.file.Path;
-import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static ru.javarush.cryptoanalyser.kolesnikova.commands.Commands.*;
 import static ru.javarush.cryptoanalyser.kolesnikova.constants.Strings.alphabetToList;
 
 
-/// DECOdE encoded.txt decode.txt 111
+/// DECOdE encoded.txt decode.txt 5
 public class Decoder implements Action {
     public static final String ROOT = PathFinder.getRoot();
-//    protected Path sourcePath;
-//    protected Path resultPath;
-//    protected int key;
 
     @Override
     public Result execute(String[] parameters) {

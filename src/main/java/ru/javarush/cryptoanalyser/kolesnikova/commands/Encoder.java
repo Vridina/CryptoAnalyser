@@ -1,7 +1,6 @@
 package ru.javarush.cryptoanalyser.kolesnikova.commands;
 
 
-import ru.javarush.cryptoanalyser.kolesnikova.constants.Strings;
 import ru.javarush.cryptoanalyser.kolesnikova.entity.Result;
 import ru.javarush.cryptoanalyser.kolesnikova.entity.ResultCode;
 import ru.javarush.cryptoanalyser.kolesnikova.util.PathFinder;
@@ -13,7 +12,7 @@ import java.util.List;
 import static ru.javarush.cryptoanalyser.kolesnikova.commands.Commands.*;
 import static ru.javarush.cryptoanalyser.kolesnikova.constants.Strings.alphabetToList;
 
-/// encode text.txt encoded.txt 111
+/// encode text.txt encoded.txt 3
 
 public class Encoder implements Action {
 
@@ -29,11 +28,9 @@ public class Encoder implements Action {
     }
 
     public static List<String> encodingText(int key, List<String> strings) {
-//        checkingTheKey(key);
         List<String> listResult = new ArrayList<>();
         for (String s : strings
         ) {
-//            char[] chars = new char[s.toCharArray().length];
             char[] chars = s.toCharArray();
             for (int j = 0; j < chars.length; j++) {
                 if (alphabetToList().contains(chars[j])) {

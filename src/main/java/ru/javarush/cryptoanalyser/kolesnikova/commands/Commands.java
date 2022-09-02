@@ -15,7 +15,7 @@ import java.util.List;
 public class Commands {
 
     public static List<String> readFile(Path sourcePath) {
-//        checkingTheFileType(sourcePath);
+//        checkingTheFileType(sourcePath); todo
         List<String> sourceList = new ArrayList<>();
         try (BufferedReader reader = Files.newBufferedReader(sourcePath, StandardCharsets.UTF_8)) {
             while (reader.ready()) {
@@ -29,7 +29,7 @@ public class Commands {
 
 
     public static List<String> readFileDict(Path sourcePath) {
-//        checkingTheFileType(sourcePath);
+//        checkingTheFileType(sourcePath);  todo
         List<String> sourceList = new ArrayList<>();
         try (BufferedReader reader = Files.newBufferedReader(sourcePath, StandardCharsets.UTF_8)) {
             while (reader.ready()) {
@@ -42,7 +42,7 @@ public class Commands {
     }
 
     public static void writeFile(Path resultPath, List<String> resultString) {
-//        checkingTheFileType(resultPath);
+//        checkingTheFileType(resultPath);  todo
         try (BufferedWriter writer = Files.newBufferedWriter(resultPath, StandardCharsets.UTF_8,
                 StandardOpenOption.WRITE,
                 StandardOpenOption.CREATE)) {
