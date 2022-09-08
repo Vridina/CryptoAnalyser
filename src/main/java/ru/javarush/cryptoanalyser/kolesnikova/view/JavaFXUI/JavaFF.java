@@ -1,4 +1,4 @@
-package ru.javarush.cryptoanalyser.kolesnikova.view;
+package ru.javarush.cryptoanalyser.kolesnikova.view.JavaFXUI;
 
 
 import javafx.application.Application;
@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 
 
-public class RunnerJavaFX extends Application {
+public class JavaFF extends Application {
     public static void main(String[] args) {
         Application.launch(args);
     }
